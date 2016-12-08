@@ -103,7 +103,8 @@ export default _.flowRight(
     const kmlLayer = new google.maps.KmlLayer({
       map: this.context[MAP],
       ...collectUncontrolledAndControlledProps(
-        {...defaultUncontrolledPropTypes, ...otherUncontrolledPropTypes},
+        defaultUncontrolledPropTypes,
+        otherUncontrolledPropTypes,
         controlledPropTypes,
         this.props
       ),
